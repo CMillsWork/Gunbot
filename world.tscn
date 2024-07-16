@@ -1,15 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnj6783hakvwf"]
+[gd_scene load_steps=8 format=3 uid="uid://cnj6783hakvwf"]
 
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_km0e6"]
 [ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="2_8pcs7"]
+[ext_resource type="PackedScene" uid="uid://cj5s8t7rpne4u" path="res://player.tscn" id="3_cgfjh"]
+[ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_entity.gd" id="3_y50rv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyyjv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2i6xd"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7jy0r"]
+_surfaces = [{
+"aabb": AABB(-4, -1, -4, 8, 2.00001, 8),
+"attribute_data": PackedByteArray(0, 0, 128, 194, 0, 0, 128, 193, 0, 0, 128, 194, 0, 0, 128, 65, 0, 0, 128, 66, 0, 0, 128, 65, 0, 0, 128, 66, 0, 0, 128, 193, 0, 0, 128, 194, 0, 0, 128, 193, 0, 0, 128, 66, 0, 0, 128, 193, 0, 0, 128, 66, 0, 0, 128, 65, 0, 0, 128, 194, 0, 0, 128, 65, 0, 0, 128, 194, 0, 0, 128, 194, 0, 0, 128, 194, 0, 0, 128, 66, 0, 0, 128, 66, 0, 0, 128, 66, 0, 0, 128, 66, 0, 0, 128, 194, 0, 0, 128, 194, 0, 0, 128, 194, 0, 0, 128, 66, 0, 0, 128, 194, 0, 0, 128, 66, 0, 0, 128, 66, 0, 0, 128, 194, 0, 0, 128, 66, 0, 0, 128, 194, 0, 0, 128, 193, 0, 0, 128, 194, 0, 0, 128, 65, 0, 0, 128, 66, 0, 0, 128, 65, 0, 0, 128, 66, 0, 0, 128, 193, 0, 0, 128, 194, 0, 0, 128, 193, 0, 0, 128, 66, 0, 0, 128, 193, 0, 0, 128, 66, 0, 0, 128, 65, 0, 0, 128, 194, 0, 0, 128, 65),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 4, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 8, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 12, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 16, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 20, 0, 22, 0, 23, 0),
+"material": SubResource("StandardMaterial3D_2i6xd"),
+"name": "__TB_empty",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 128, 192, 0, 0, 128, 63, 0, 0, 128, 192, 0, 0, 128, 192, 0, 0, 128, 191, 0, 0, 128, 192, 0, 0, 128, 64, 0, 0, 128, 191, 0, 0, 128, 192, 0, 0, 128, 64, 0, 0, 128, 63, 0, 0, 128, 192, 0, 0, 128, 192, 0, 0, 128, 63, 0, 0, 128, 192, 0, 0, 128, 192, 0, 0, 128, 63, 0, 0, 128, 64, 0, 0, 128, 192, 0, 0, 128, 191, 0, 0, 128, 64, 0, 0, 128, 192, 0, 0, 128, 191, 0, 0, 128, 192, 0, 0, 128, 64, 0, 0, 128, 191, 0, 0, 128, 192, 0, 0, 128, 192, 0, 0, 128, 191, 0, 0, 128, 192, 0, 0, 128, 192, 0, 0, 128, 191, 0, 0, 128, 64, 0, 0, 128, 64, 0, 0, 128, 191, 0, 0, 128, 64, 0, 0, 128, 64, 0, 0, 128, 63, 0, 0, 128, 192, 0, 0, 128, 64, 0, 0, 128, 63, 0, 0, 128, 64, 0, 0, 128, 192, 0, 0, 128, 63, 0, 0, 128, 64, 0, 0, 128, 192, 0, 0, 128, 63, 0, 0, 128, 192, 0, 0, 128, 64, 0, 0, 128, 63, 0, 0, 128, 192, 0, 0, 128, 64, 0, 0, 128, 191, 0, 0, 128, 192, 0, 0, 128, 64, 0, 0, 128, 191, 0, 0, 128, 64, 0, 0, 128, 64, 0, 0, 128, 63, 0, 0, 128, 64, 0, 0, 128, 192, 0, 0, 128, 63, 0, 0, 128, 64, 0, 0, 128, 64, 0, 0, 128, 63, 0, 0, 128, 64, 0, 0, 128, 64, 0, 0, 128, 191, 0, 0, 128, 64, 0, 0, 128, 192, 0, 0, 128, 191, 0, 0, 128, 64, 255, 255, 255, 255, 255, 255, 255, 63, 255, 255, 255, 255, 255, 255, 255, 63, 255, 255, 255, 255, 255, 255, 255, 63, 255, 255, 255, 255, 255, 255, 255, 63, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 0, 0, 255, 127, 255, 127, 255, 191, 255, 127, 0, 0, 255, 127, 255, 63, 255, 127, 0, 0, 255, 127, 255, 63, 255, 127, 0, 0, 255, 127, 255, 63, 255, 127, 0, 0, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191, 255, 255, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 255, 127, 255, 63, 255, 255, 255, 127, 255, 127, 255, 63, 255, 127, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 191)
+}]
 
 [node name="World" type="Node3D"]
 
 [node name="QodotMap" type="Node3D" parent="."]
 script = ExtResource("1_km0e6")
-map_file = "C:/Users/kingl/Game Projects/Gunbot/maps/unnamed.map"
+map_file = "res://maps/unnamed.map"
 entity_fgd = ExtResource("2_8pcs7")
 texture_file_extensions = PackedStringArray("png", "jpg", "jpeg", "bmp")
 default_material = SubResource("StandardMaterial3D_iyyjv")
+
+[node name="entity_0_worldspawn" type="Node3D" parent="QodotMap"]
+script = ExtResource("3_y50rv")
+properties = {
+"classname": "worldspawn"
+}
+
+[node name="entity_0_mesh_instance" type="MeshInstance3D" parent="QodotMap/entity_0_worldspawn"]
+cast_shadow = 2
+gi_mode = 0
+mesh = SubResource("ArrayMesh_7jy0r")
+
+[node name="Player" parent="." instance=ExtResource("3_cgfjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62035, 2.71773, -1.0637)
