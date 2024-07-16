@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://8gpkse2ah8tl"]
+
+[node name="Projectile" type="Node3D"]

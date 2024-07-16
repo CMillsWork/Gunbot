@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdvqossdqfsv1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ovo0h"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="MainCamera" type="Camera3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ovo0h")
