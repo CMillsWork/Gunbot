@@ -1,7 +1,7 @@
 extends Node
 
 @export var jump_velocity : float = 6.0
-@export var look_sensitivity : float = 0.09 
+@export var look_sensitivity : float = 0.009 
 
 var paused : bool = false
 

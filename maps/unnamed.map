@@ -3,13 +3,92 @@
 // entity 0
 {
 "classname" "worldspawn"
+"_tb_mod" "textures;maps"
+"wad" ""
 // brush 0
 {
-( -64 -64 -16 ) ( -64 -63 -16 ) ( -64 -64 -15 ) __TB_empty 0 0 0 1 1
-( -64 -64 -16 ) ( -64 -64 -15 ) ( -63 -64 -16 ) __TB_empty 0 0 0 1 1
-( -64 -64 -16 ) ( -63 -64 -16 ) ( -64 -63 -16 ) __TB_empty 0 0 0 1 1
-( 64 64 16 ) ( 64 65 16 ) ( 65 64 16 ) __TB_empty 0 0 0 1 1
-( 64 64 16 ) ( 65 64 16 ) ( 64 64 17 ) __TB_empty 0 0 0 1 1
-( 64 64 16 ) ( 64 64 17 ) ( 64 65 16 ) __TB_empty 0 0 0 1 1
+( -64 0 0 ) ( -64 1 0 ) ( -64 0 1 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 -16 32 0 1 1
+( -64 0 0 ) ( -64 0 1 ) ( -63 0 0 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 32 32 0 1 1
+( -64 0 0 ) ( -63 0 0 ) ( -64 1 0 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 32 16 0 1 1
+( 32 144 16 ) ( 32 145 16 ) ( 33 144 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 32 16 0 1 1
+( 32 144 16 ) ( 33 144 16 ) ( 32 144 17 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 32 32 0 1 1
+( 32 144 16 ) ( 32 144 17 ) ( 32 145 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 -16 32 0 1 1
 }
+// brush 1
+{
+( -128 0 0 ) ( -128 1 0 ) ( -128 0 1 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -128 0 0 ) ( -128 0 1 ) ( -127 0 0 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -128 0 0 ) ( -127 0 0 ) ( -128 1 0 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -64 144 16 ) ( -64 145 16 ) ( -63 144 16 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -64 144 16 ) ( -63 144 16 ) ( -64 144 17 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -64 144 16 ) ( -64 144 17 ) ( -64 145 16 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+}
+// brush 2
+{
+( -64 144 0 ) ( -64 145 0 ) ( -64 144 1 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( -64 144 0 ) ( -64 144 1 ) ( -63 144 0 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( -64 144 0 ) ( -63 144 0 ) ( -64 145 0 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 224 16 ) ( 32 225 16 ) ( 33 224 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 224 16 ) ( 33 224 16 ) ( 32 224 17 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 224 16 ) ( 32 224 17 ) ( 32 225 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+}
+// brush 3
+{
+( 32 -16 0 ) ( 32 -15 0 ) ( 32 -16 1 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 -16 0 ) ( 32 -16 1 ) ( 33 -16 0 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 0 0 1 1
+( 32 -16 0 ) ( 33 -16 0 ) ( 32 -15 0 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 0 0 1 1
+( 256 144 16 ) ( 256 145 16 ) ( 257 144 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 0 0 1 1
+( 256 144 16 ) ( 257 144 16 ) ( 256 144 17 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 0 0 1 1
+( 256 144 16 ) ( 256 144 17 ) ( 256 145 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+}
+// brush 4
+{
+( -64 -96 0 ) ( -64 -95 0 ) ( -64 -96 1 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( -64 -96 0 ) ( -64 -96 1 ) ( -63 -96 0 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( -64 -96 0 ) ( -63 -96 0 ) ( -64 -95 0 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 0 16 ) ( 32 1 16 ) ( 33 0 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 0 16 ) ( 33 0 16 ) ( 32 0 17 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 0 16 ) ( 32 0 17 ) ( 32 1 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+}
+// brush 5
+{
+( 160 -16 16 ) ( 160 -15 16 ) ( 160 -16 17 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 160 -16 16 ) ( 160 -16 17 ) ( 161 -16 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 160 -16 16 ) ( 161 -16 16 ) ( 160 -15 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 176 144 64 ) ( 176 145 64 ) ( 177 144 64 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 176 144 64 ) ( 177 144 64 ) ( 176 144 65 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 176 144 64 ) ( 176 144 65 ) ( 176 145 64 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+}
+// brush 6
+{
+( -64 -96 16 ) ( -64 -95 16 ) ( -64 -96 17 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( -64 -96 16 ) ( -64 -96 17 ) ( -63 -96 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( -64 -96 16 ) ( -63 -96 16 ) ( -64 -95 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 -80 96 ) ( 32 -79 96 ) ( 33 -80 96 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 -80 96 ) ( 33 -80 96 ) ( 32 -80 97 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+( 32 -80 96 ) ( 32 -80 97 ) ( 32 -79 96 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 0 0 0 1 1
+}
+// brush 7
+{
+( -128 0 16 ) ( -128 1 16 ) ( -128 0 17 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -128 0 16 ) ( -128 0 17 ) ( -127 0 16 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -128 0 16 ) ( -127 0 16 ) ( -128 1 16 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -112 144 80 ) ( -112 145 80 ) ( -111 144 80 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -112 144 80 ) ( -111 144 80 ) ( -112 144 81 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+( -112 144 80 ) ( -112 144 81 ) ( -112 145 80 ) Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown 0 0 0 1 1
+}
+// brush 8
+{
+( -64 208 16 ) ( -64 209 16 ) ( -64 208 17 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 16 0 1 1
+( -64 208 16 ) ( -64 208 17 ) ( -63 208 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 16 0 1 1
+( -64 208 16 ) ( -63 208 16 ) ( -64 209 16 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 -16 0 1 1
+( 0 224 64 ) ( 0 225 64 ) ( 1 224 64 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 -16 0 1 1
+( 0 224 64 ) ( 1 224 64 ) ( 0 224 65 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 16 0 1 1
+( 0 224 64 ) ( 0 224 65 ) ( 0 225 64 ) Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02 16 16 0 1 1
+}
+}
+// entity 1
+{
+"classname" "info_player_start"
+"origin" "-16 64 40"
 }
