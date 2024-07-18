@@ -13,12 +13,12 @@ func _process(delta : float) -> void:
 func action(jump_velocity : float, gravity : float) -> void:
 	var delta = get_physics_process_delta_time()
 	#get_parent().get_parent().velocity.y += get_parent().JUMP_VELOCITY * delta
-	get_parent().get_parent().velocity.y = -800.0 #lower value
+	get_parent().get_parent().velocity.y = jump_velocity #lower value
 	var lerp_amount = 0.0
 	
 	while lerp_amount < 1:
 		lerp_amount += delta
-		get_parent().get_parent().velocity.y = lerp(-800.0, gravity, lerp_amount)
+		get_parent().get_parent().velocity.y = lerp(jump_velocity, -gravity, lerp_amount)
 		
 		if get_parent().get_parent().is_on_floor():
 			break

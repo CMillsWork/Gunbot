@@ -1,7 +1,8 @@
 extends Node
 
-@export var jump_velocity : float = 6.0
+@export var jump_velocity : float = 95
 @export var look_sensitivity : float = 0.009 
+@export var speed : float = 200
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -24,7 +25,7 @@ func _physics_process(delta : float) -> void:
 	basis.y.y = 1
 	basis.y.z = 0
 	
-	get_parent().velocity = basis * ($Run.action(input_dir) * get_parent().SPEED) * delta
+	get_parent().velocity = basis * ($Run.action(input_dir) * speed) * delta
 	
 	# Add the gravity.
 	if not get_parent().is_on_floor():
