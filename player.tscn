@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2xcltmf21jw3" path="res://player_controller.tscn" id="1_5h3hd"]
 [ext_resource type="Script" path="res://player.gd" id="1_khcm5"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ejcw1"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_30yq8"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lajch"]
 
@@ -16,7 +16,7 @@ script = ExtResource("1_khcm5")
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_ejcw1")
+shape = SubResource("CapsuleShape3D_30yq8")
 
 [node name="PlayerModel" type="Node3D" parent="."]
 

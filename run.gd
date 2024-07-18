@@ -11,6 +11,7 @@ func _ready():
 func _process(delta):
 	pass
 
-func action(vector : Vector3) -> void:
-	var input_dir = vector.normalized()
-	wish_dir = get_parent().get_parent().global_transform.basis * Vector3(-input_dir.x, 0.0, -input_dir.y)
+func action(input_dir : Vector2) -> Vector3:
+	return Vector3(input_dir.x, 0.0, input_dir.y)
+	
+	
