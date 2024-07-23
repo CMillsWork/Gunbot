@@ -1,12 +1,15 @@
 extends Node
 
-@export var jump_velocity : float = 95
+@export var jump_velocity : float = 15
+@export var air_control_multiplier : float = 0.85
 @export var look_sensitivity : float = 0.009 
-@export var speed : float = 200
+@export var speed : float = 300
+
+var air_time : float = 0.0
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var paused : bool = false
+var jumped : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,28 +29,35 @@ func _physics_process(delta : float) -> void:
 	basis.y.z = 0
 	
 	get_parent().velocity = basis * ($Run.action(input_dir) * speed) * delta
+	var velocity = get_parent().velocity
 	
 	# Add the gravity.
 	if not get_parent().is_on_floor():
 		_handle_air_physics(delta)
-
+		print_debug(get_parent().velocity.y)
+	else:
+		air_time = 0.0
+	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") && get_parent().is_on_floor():
-		$Jump.action(jump_velocity, gravity)
+	if Input.is_action_just_pressed('jump') && get_parent().is_on_floor() && !jumped:
+		#initial impulse
+		jumped = true
+		
+		get_parent().velocity.y = jump_velocity
+	
+	if Input.is_action_pressed("jump") && !get_parent().is_on_floor() && jumped && air_time < 0.15:
+		# additional jump impulse while jump is being held
+		
+		#get_parent().velocity.y += jump_velocity - (gravity * air_time)
+		get_parent().velocity.y += jump_velocity * jump_velocity *1.5 * delta
+		#$Jump.action(jump_velocity, gravity, air_time)
+		
+	if Input.is_action_just_released('jump'):
+		jumped = false
 
 func _input(event : InputEvent) -> void:
 	var parent : CharacterBody3D = get_parent()
 	var camera : Camera3D = parent.get_camera()
-	
-	if Input.is_action_just_pressed("menu"):
-		if paused:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-			paused = false
-		else:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			paused = true
-	else:
-		$Idle.action()
 	
 	if event is InputEventMouseMotion:
 		
@@ -61,4 +71,5 @@ func set_velocity(vect : Vector3):
 
 
 func _handle_air_physics(delta):
-	get_parent().velocity.y -= gravity * delta
+	air_time += delta
+	get_parent().velocity.y -= gravity * delta * air_time

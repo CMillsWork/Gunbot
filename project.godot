@@ -13,6 +13,7 @@ config_version=5
 config/name="Gunbot"
 run/main_scene="res://world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [editor_plugins]
@@ -69,4 +70,4 @@ menu={
 
 [physics]
 
-3d/default_gravity=295.0
+3d/default_gravity=275.0

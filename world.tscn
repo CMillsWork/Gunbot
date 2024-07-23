@@ -1,10 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://cnj6783hakvwf"]
+[gd_scene load_steps=24 format=3 uid="uid://cnj6783hakvwf"]
 
+[ext_resource type="Script" path="res://world.gd" id="1_ncvn3"]
 [ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="2_l8p1e"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="3_1shel"]
 [ext_resource type="PackedScene" uid="uid://cj5s8t7rpne4u" path="res://player.tscn" id="3_cgfjh"]
 [ext_resource type="Texture2D" uid="uid://cyje5sww6qrd1" path="res://textures/Classic_64_Asset_Pack_0.6/Boxes/Materials/cardboard_02.jpg" id="4_6s02t"]
 [ext_resource type="Texture2D" uid="uid://lnutuwsc4ytp" path="res://textures/Classic_64_Asset_Pack_0.6/Bricks/Materials/brick_medium_brown.png" id="5_glf4b"]
+[ext_resource type="Script" path="res://EnemyController.gd" id="7_yysbk"]
+[ext_resource type="Script" path="res://DemoBaddie.gd" id="8_j6sy5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_goc2o"]
 albedo_texture = ExtResource("4_6s02t")
@@ -74,7 +77,12 @@ points = PackedVector3Array(0, 2.5, -4, 0, 0.5, -4, 4.5, 0.5, -4, 4.5, 2.5, -4, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cumou"]
 points = PackedVector3Array(6.5, 2, -2, 6.5, 0.5, -2, 7, 0.5, -2, 7, 2, -2, 6.5, 2, 0, 6.5, 0.5, 0, 7, 0.5, 0, 7, 2, 0)
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s40r8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gqkmu"]
+
 [node name="World" type="Node3D"]
+script = ExtResource("1_ncvn3")
 
 [node name="Player" parent="." instance=ExtResource("3_cgfjh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24755, 1.46579, -0.686906)
@@ -130,3 +138,16 @@ shape = SubResource("ConvexPolygonShape3D_cumou")
 
 [node name="entity_1_info_player_start" type="Node3D" parent="FuncGodotMap"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.25, -0.5)
+
+[node name="EnemyController" type="Node3D" parent="."]
+script = ExtResource("7_yysbk")
+
+[node name="DemoBaddie" type="CharacterBody3D" parent="EnemyController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59402, 1.58961, 3.54388)
+script = ExtResource("8_j6sy5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyController/DemoBaddie"]
+shape = SubResource("CapsuleShape3D_s40r8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnemyController/DemoBaddie"]
+mesh = SubResource("CapsuleMesh_gqkmu")
